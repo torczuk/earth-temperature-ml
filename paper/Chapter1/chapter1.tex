@@ -1,0 +1,40 @@
+\chapter{Understanding datasets}
+
+\section{Source of the data}
+
+\subsection{Barkley Earth}
+
+Berkeley Earth is independent, non-profit organization founded by Richard and Elizabeth Muller in 2010, focused on environmental data sience and analysis. 
+One of the main purposes of the project is to raise awareness about global warming. 
+Berkeley Earth provides open source air polution and global temperature data \cite{berkeleyearthdata}. 
+Their datasets cover 250 years of Earth temperature.
+
+Berkeley Earth publishes their data in two type of formats
+\begin{itemize}
+    \item Time Series Data
+    \item Gridded Data
+\end{itemize}
+
+{\it Time Series Data} summarises tabular format of yearly, monthly and daily anomalies of land's temperature. 
+Below there is an example of such representation
+\begin{verbatim}
+%               Monthly    Annual    Five-year  Ten-year   Twenty-year
+% Year, Month,  Anomaly,   Anomaly,  Anomaly,   Anomaly,   Anomaly
+  ...
+  1987     1     0.587     0.255     0.270      0.339      0.344
+  1987     2     1.008     0.249     0.274      0.344      0.345
+  1987     3     0.017     0.300     0.281      0.353      0.346
+  1987     4     0.300     0.323     0.287      0.354      0.347
+  ...
+\end{verbatim}
+
+{\it Gridded Data} adds additional dimension to a dataset. A grid is represended in two forms, as 1º x 1º {\it latitude-longitude} representation or {\it Equal Area} format that divides Earth into 15984 equaled cells.
+{\it Gridded Data} is described by NetCDF format, that is described in Appendix \ref{app:netcdf}
+
+\subsection{Our World in Data}
+
+\section{Understanding data format}
+
+\section{Datasets Insights}
+
+\section{Summary}
