@@ -37,6 +37,27 @@ Below there is an example of such representation
 
 \section{Datasets Insights}
 
+\subsection{Temperature anomalies}
+
+Majority of the tempoerature measurements use 1951 - 1980 period as a baseline. There are a couple of factors behind this decision. Firstly, this period wasn't affected so mutch by Green House Gass emission. 
+Secondly in this time there were no major vulcanic erruptions and solar disturbances that could affect Earth's temperature. Another argument for using the period between 1951 - 1980 accordin to NASA is
+``We choose 1951-1980 as the base period because that was the base period at the time that "global warming" began to be a public issue. Also it is the time that "baby boomers" grew up, so this choice for base period allows those people to relate today's climate to that which they remember`` \cite{nasa-giss}.
+Both ~\ref{fig:temperature_anomalies} and ~\ref{fig:climat_stripes} clearly visualize temperature anomalies trens since 1820.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{img/temperature_anomalies.png}
+  \caption{Land temperature anomalies since 1820}
+  \label{fig:temperature_anomalies}
+\end{figure}
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{img/climate_stripes.png}
+  \caption{Land climate stripes since 1820}
+  \label{fig:climat_stripes}
+\end{figure}
+
+\subsection{\coo\ emission}
+
 Based on the dataset, total quantity of emmited \coo\ since 1750 year was 11,912,250 million metric tons. 
 ~\ref{fig:co2_emission_global} illustrates the fluctuations of carbon dioxide emissions across different countries in 1800, 1850, 1900, 1950, 2000, and 2020.
 \begin{figure}[h]
@@ -64,6 +85,47 @@ Overall, it is hoped that all countries will take concerted and effective measur
   \label{fig:co2_emission_by_region}
 \end{figure}
 
+There are numerous factors that can contribute to carbon dioxide emissions. According to the Parson's correlation table shown in ~\ref{tab:correlations-co2-pop-gdp}, it can be inferred that there is a positive correlation between GDP and \coo\ emissions.
+Similarly, a comparable trend for European Union countries was observed in \cite{relation-between-co2-gdp}.
 
+\begin{table}[ht]
+\begin{tabular}{ |p{3cm}||p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ & \textbf{population} & \textbf{gdp} & \textbf{co2} \\
+ \hline
+\textbf{population} &  1.000000 	& 0.587208 	& 0.597836 \\
+  \textbf{gdp} &  0.587208  &	1.000000 &	0.922921  \\
+  \textbf{co2} &  0.597836 &	0.922921 &	1.000000 \\
+ \hline
+\end{tabular}
+\caption{Correlation table between \coo\ emission, population and gross domestic product for \coo\ emission dataset} 
+\label{tab:correlations-co2-pop-gdp}
+\end{table}
+
+\subsection{Corelation between \coo\ emission and temperature anomalies}
+
+Certainly, it is a natural question to ask about the correlation between /coo/ emissions and temperature anomalies. By combining both datasets and matching them by the year, we can gain valuable insights into this relationship. The use of a Parson's correlation table, see ~\ref{tab:correlations-co2-annomalies}, helps to determine whether there is a significant correlation between the two variables.
+
+\begin{table}[ht]
+\begin{tabular}{ |p{3cm}||p{2,7cm}|p{3cm}|p{1,7cm}|  }
+ \hline
+ & \textbf{year anomaly} & \textbf{ten year anomaly} & \textbf{co2} \\
+ \hline
+\textbf{year anomaly} &  1.000000 &	0.934620 &	0.886943 \\
+  \textbf{ten year anomaly} &  0.934620 &	1.000000 &	0.932080  \\
+  \textbf{co2} &  0.886943 	& 0.932080 &	1.000000 \\
+ \hline
+\end{tabular}
+\caption{Correlation table between \coo\ emission and temperature anomalies} 
+\label{tab:correlations-co2-annomalies}
+\end{table}
+
+Figure ~\ref{fig:co2-temperature-corelation} demonstrates correlation of attributes with the highest score. This obserwation will be input by the methods used in \autoref{chap:two} for Earth't temperature prediction.
+
+\begin{figure}[h]
+  \includegraphics[width=\linewidth]{img/co2-temperature-corelation.png}
+  \caption{Corelation between \coo\ emission and temperature anomalies}
+  \label{fig:co2-temperature-corelation}
+\end{figure}
 
 \section{Summary}
